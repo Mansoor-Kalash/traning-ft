@@ -1,6 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import Card from "react-bootstrap/Card";
-import FavBooks from "./FavBooks.css";
 import React from "react";
 // import axios from "axios";
 
@@ -12,7 +11,7 @@ class FavBook extends React.Component {
                 
 
                 <Card key ={this.props.key} style={{ width: '18rem' }}>
-  <Card.Img  className="img-book"  src={this.props.img} variant="top" src="holder.js/100px180" />
+  <Card.Img variant="top"  style={{ width: '286px', height:'180px' }}  src={this.props.img}  />
   <Card.Body>
     <Card.Title>{this.props.title}</Card.Title>
     <Card.Text>
