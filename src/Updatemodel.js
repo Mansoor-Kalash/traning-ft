@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 
-class NewBookModel extends React.Component {
+class Updatemodel extends React.Component {
   render() {
     return (
       <div>
@@ -12,14 +12,14 @@ class NewBookModel extends React.Component {
           <Modal.Dialog>
             <Modal.Header
               type="click"
-              onClick={this.props.showModel}
+              onClick={this.props.showModelUpdate}
               closeButton
             >
-              <Modal.Title>Add New Book To The List</Modal.Title>
+              <Modal.Title>Update data of book</Modal.Title>
             </Modal.Header>
 
             <Modal.Body>
-              <Form onSubmit={this.props.addNewBook}>
+              <Form onSubmit={this.props.updateBook}>
                 <Form.Control
                   size="lg"
                   type="text"
@@ -50,7 +50,7 @@ class NewBookModel extends React.Component {
 
             <Modal.Footer>
               <Button
-                onClick={this.props.showModel}
+                onClick={this.props.showModelUpdate}
                 type="click"
                 variant="secondary"
               >
@@ -64,4 +64,4 @@ class NewBookModel extends React.Component {
   }
 }
 
-export default NewBookModel;
+export default Updatemodel;
