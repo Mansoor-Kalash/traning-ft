@@ -1,43 +1,28 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
-
-import React from "react";
-// import axios from "axios";
-
+import React from 'react';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 class FavBook extends React.Component {
-  render() {
-    return (
-      <div>
-        <br />
-        <br />
-        <Card 
-          
-          style={{ width: "18rem", display: "inline-block" }}
-        >
-          <Card.Body>
-            <Card.Title>{this.props.title}</Card.Title>
-            <Card.Text>{this.props.description}</Card.Text>
-            <Card.Text>{this.props.status}</Card.Text>
-          </Card.Body>
-          <br/>
-          <Button
-            onClick={()=>{this.props.deletebook(this.props._id)}}
-            type="click"
-            variant="secondary"
-          >Delete</Button>
-           <Button
-            onClick={()=>{this.props.showModelUpdate(this.props._id)}}
-            type="click"
-            variant="secondary"
-          >Update</Button>
-          
-        </Card>
-        <br />
-        <br />
-      </div>
-    );
-  }
+    // onSubmit={()=>this.props.ubdataData(this.props.email,this.props.lat)}
+    render() {
+        return (
+            <div>
+                    <Card   style={{ width: '18rem' }}>
+  <Card.Img variant="top" src="holder.js/100px180" />
+  <Card.Body>
+    <Card.Title>{this.props.lat}</Card.Title>
+    <Card.Text>
+      {this.props.email}
+    </Card.Text>
+    <Button onClick={()=>this.props.dlelteItem(this.props.lat,this.props.email)} type="click" variant="primary">delete</Button>
+    <Button onClick={()=>this.props.showMethodOfUpdate(this.props.lat,this.props.email)} type="click" variant="primary">delete</Button>
+
+    {/* <Button type="submit" variant="primary">update</Button> */}
+
+  </Card.Body>
+</Card>
+            </div>
+        );
+    }
 }
 
 export default FavBook;

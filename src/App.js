@@ -4,6 +4,7 @@ import Header from "./Header";
 import Profile from "./Profile";
 import Footer from "./Footer";
 import Login from "./Login";
+import FavBook from "./FavBook";
 import { withAuth0 } from "@auth0/auth0-react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -24,6 +25,9 @@ class App extends React.Component {
             {/* TODO: add a route with a path of '/profile' that renders a `Profile` component */}
             <Route exact path="/profile">
               <Profile />
+            </Route>
+            <Route exact path="/MyFavorite">
+              <FavBook/>
             </Route>
           </Switch>
           <Footer />
